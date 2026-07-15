@@ -102,6 +102,76 @@ Push your changes to the remote repository:
 git push origin main
 ```
 
+### 8. Creating a New Branch
+
+Branches let you work on features or fixes in isolation from the `main` branch.
+
+Create a new branch and switch to it immediately:
+
+```powershell
+git checkout -b branch-name
+```
+
+Or, create the branch first and switch to it separately:
+
+```powershell
+git branch branch-name
+git checkout branch-name
+```
+
+To list all local branches (the active branch is marked with `*`):
+
+```powershell
+git branch
+```
+
+### 9. Switching Between Branches
+
+To switch to an existing branch:
+
+```powershell
+git checkout branch-name
+```
+
+Or using the newer `switch` command (Git 2.23+):
+
+```powershell
+git switch branch-name
+```
+
+To switch back to `main`:
+
+```powershell
+git checkout main
+```
+
+### 10. Pushing a Branch to the Remote Repository
+
+When pushing a new branch for the first time, set the upstream remote so future `git push` commands know where to send changes:
+
+```powershell
+git push -u origin branch-name
+```
+
+For subsequent pushes on the same branch:
+
+```powershell
+git push
+```
+
+### 11. Creating a Pull Request
+
+A Pull Request (PR) lets you propose merging your branch into another branch (usually `main`) and request a code review.
+
+1. Push your branch to GitHub (see Step 10).
+2. Go to the repository on [GitHub](https://github.com).
+3. Click the **Compare & pull request** button that appears at the top of the repository page after pushing.
+4. Fill in the **Title** and **Description** of your changes.
+5. Set the **base branch** (e.g., `main`) and verify the **compare branch** is your feature branch.
+6. Click **Create pull request**.
+
+Once the PR is reviewed and approved, it can be merged into the base branch via the GitHub interface.
+
 ## Java Basics
 
 ### Question 1 : Running the First Java Program
